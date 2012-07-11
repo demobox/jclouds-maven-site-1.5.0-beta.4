@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd-cpd>
+<duplication lines="125" tokens="267">
+<file line="29" path="/scratch/hudson/workspace/jclouds-maven-site-1.5.0-beta.4/apis/cloudstack/src/main/java/org/jclouds/cloudstack/domain/ISOExtraction.java"/>
+<file line="29" path="/scratch/hudson/workspace/jclouds-maven-site-1.5.0-beta.4/apis/cloudstack/src/main/java/org/jclouds/cloudstack/domain/TemplateExtraction.java"/>
+<codefragment>
+<![CDATA[
+public class ISOExtraction implements Comparable<ISOExtraction> {
+
+   public static Builder builder() {
+      return new Builder();
+   }
+
+   public static class Builder {
+
+      private String id;
+      private String accountId;
+      private Date created;
+      private String extractId;
+      private ExtractMode extractMode;
+      private String name;
+      private String state;
+      private String status;
+      private String storageType;
+      private int uploadPercentage;
+      private String url;
+      private String zoneId;
+      private String zoneName;
+
+      /**
+       * @param id the id of extracted object
+       */
+      public Builder id(String id) {
+         this.id = id;
+         return this;
+      }
+
+      /**
+       * @param accountId the account id to which the extracted object belongs
+       */
+      public Builder accountId(String accountId) {
+         this.accountId = accountId;
+         return this;
+      }
+
+      /**
+       * @param created the time and date the object was created
+       */
+      public Builder created(Date created) {
+         this.created = created;
+         return this;
+      }
+
+      /**
+       * @param extractId the upload id of extracted object
+       */
+      public Builder extractId(String extractId) {
+         this.extractId = extractId;
+         return this;
+      }
+
+      /**
+       * @param extractMode the mode of extraction - upload or download
+       */
+      public Builder extractMode(ExtractMode extractMode) {
+         this.extractMode = extractMode;
+         return this;
+      }
+
+      /**
+       * @param name the name of the extracted object
+       */
+      public Builder name(String name) {
+         this.name = name;
+         return this;
+      }
+
+      /**
+       * @param state the state of the extracted object
+       */
+      public Builder state(String state) {
+         this.state = state;
+         return this;
+      }
+
+      /**
+       * @param status the status of the extraction
+       */
+      public Builder status(String status) {
+         this.status = status;
+         return this;
+      }
+
+      /**
+       * @param storageType type of the storage
+       */
+      public Builder storageType(String storageType) {
+         this.storageType = storageType;
+         return this;
+      }
+
+      /**
+       * @param uploadPercentage the percentage of the entity uploaded to the specified location
+       */
+      public Builder uploadPercentage(int uploadPercentage) {
+         this.uploadPercentage = uploadPercentage;
+         return this;
+      }
+
+      /**
+       * @param url if mode = upload then url of the uploaded entity. if mode = download the url from which the entity can be downloaded
+       */
+      public Builder url(String url) {
+         this.url = url;
+         return this;
+      }
+
+      /**
+       * @param zoneId zone ID the object was extracted from
+       */
+      public Builder zoneId(String zoneId) {
+         this.zoneId = zoneId;
+         return this;
+      }
+
+      /**
+       * @param zoneName zone name the object was extracted from
+       */
+      public Builder zoneName(String zoneName) {
+         this.zoneName = zoneName;
+         return this;
+      }
+]]>
+</codefragment>
+</duplication>
+<duplication lines="98" tokens="157">
+<file line="179" path="/scratch/hudson/workspace/jclouds-maven-site-1.5.0-beta.4/apis/cloudstack/src/main/java/org/jclouds/cloudstack/domain/ISOExtraction.java"/>
+<file line="208" path="/scratch/hudson/workspace/jclouds-maven-site-1.5.0-beta.4/apis/cloudstack/src/main/java/org/jclouds/cloudstack/domain/TemplateExtraction.java"/>
+<codefragment>
+<![CDATA[
+   ISOExtraction() {
+   }
+
+   /**
+    * @return the id of extracted object
+    */
+   public String getId() {
+      return id;
+   }
+
+   /**
+    * @return the account id to which the extracted object belongs
+    */
+   public String getAccountId() {
+      return accountId;
+   }
+
+   /**
+    * @return the time and date the object was created
+    */
+   public Date getCreated() {
+      return created;
+   }
+
+   /**
+    * @return the upload id of extracted object
+    */
+   public String getExtractId() {
+      return extractId;
+   }
+
+   /**
+    * @return the mode of extraction - upload or download
+    */
+   public ExtractMode getExtractMode() {
+      return extractMode;
+   }
+
+   /**
+    * @return the name of the extracted object
+    */
+   public String getName() {
+      return name;
+   }
+
+   /**
+    * @return the state of the extracted object
+    */
+   public String getState() {
+      return state;
+   }
+
+   /**
+    * @return the status of the extraction
+    */
+   public String getStatus() {
+      return status;
+   }
+
+   /**
+    * @return type of the storage
+    */
+   public String getStorageType() {
+      return storageType;
+   }
+
+   /**
+    * @return the percentage of the entity uploaded to the specified location
+    */
+   public int getUploadPercentage() {
+      return uploadPercentage;
+   }
+
+   /**
+    * @return if mode = upload then url of the uploaded entity. if mode = download the url from which the entity can be downloaded
+    */
+   public String getUrl() {
+      return url;
+   }
+
+   /**
+    * @return zone ID the object was extracted from
+    */
+   public String getZoneId() {
+      return zoneId;
+   }
+
+   /**
+    * @return zone name the object was extracted from
+    */
+   public String getZoneName() {
+      return zoneName;
+   }
+
+   @Override
+   public boolean equals(Object o) {
+      if (this == o) return true;
+      if (o == null || getClass() != o.getClass()) return false;
+]]>
+</codefragment>
+</duplication>
+<duplication lines="33" tokens="110">
+<file line="51" path="/scratch/hudson/workspace/jclouds-maven-site-1.5.0-beta.4/apis/cloudstack/src/main/java/org/jclouds/cloudstack/domain/DiskOffering.java"/>
+<file line="60" path="/scratch/hudson/workspace/jclouds-maven-site-1.5.0-beta.4/apis/cloudstack/src/main/java/org/jclouds/cloudstack/domain/ServiceOffering.java"/>
+<codefragment>
+<![CDATA[
+      private Set<String> tags = ImmutableSet.of();
+
+      public Builder id(String id) {
+         this.id = id;
+         return this;
+      }
+
+      public Builder name(String name) {
+         this.name = name;
+         return this;
+      }
+
+      public Builder displayText(String displayText) {
+         this.displayText = displayText;
+         return this;
+      }
+
+      public Builder created(Date created) {
+         this.created = created;
+         return this;
+      }
+
+      public Builder domain(String domain) {
+         this.domain = domain;
+         return this;
+      }
+
+      public Builder domainId(String domainId) {
+         this.domainId = domainId;
+         return this;
+      }
+
+      public Builder diskSize(int diskSize) {
+]]>
+</codefragment>
+</duplication>
+<duplication lines="13" tokens="104">
+<file line="297" path="/scratch/hudson/workspace/jclouds-maven-site-1.5.0-beta.4/apis/cloudstack/src/main/java/org/jclouds/cloudstack/domain/IPForwardingRule.java"/>
+<file line="315" path="/scratch/hudson/workspace/jclouds-maven-site-1.5.0-beta.4/apis/cloudstack/src/main/java/org/jclouds/cloudstack/domain/PortForwardingRule.java"/>
+<codefragment>
+<![CDATA[
+      if (!Objects.equal(privateEndPort, that.privateEndPort)) return false;
+      if (!Objects.equal(publicPort, that.publicPort)) return false;
+      if (!Objects.equal(state, that.state)) return false;
+      if (!Objects.equal(virtualMachineDisplayName, that.virtualMachineDisplayName)) return false;
+      if (!Objects.equal(virtualMachineId, that.virtualMachineId)) return false;
+      if (!Objects.equal(virtualMachineName, that.virtualMachineName)) return false;
+
+      return true;
+   }
+
+   @Override
+   public int hashCode() {
+       return Objects.hashCode(IPAddress, IPAddressId, endPort, id, protocol, startPort, publicEndPort,
+]]>
+</codefragment>
+</duplication>
+</pmd-cpd>
